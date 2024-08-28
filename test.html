@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <h1>
+    <span class="highlight">Какашки бесплатно</span>
+  </h1>
+  <p>
+    <span class="text">Какашки бесплатные скачать без денег не обман</span>
+  </p>
+  <button class="action-button" id="downloadButton">Скачать</button>
+
+  <script>
+    const downloadButton = document.getElementById('downloadButton');
+
+    downloadButton.addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.href = 'kakashki.png';
+      link.download = 'kakashki.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>
